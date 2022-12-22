@@ -4,6 +4,18 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sb
 
+# 차트에 한글 출력될 수 있도록 하는 명령------------
+import platform
+from matplotlib import font_manager, rc
+plt.rcParams['axes.unicode_minus'] = False
+if platform.system() == 'Linux':
+    rc('font', family='NanumGothic')
+# -------------------------------------------------
+# 위 코드는 ec2에 한글 폰트가 설치되어 있어야 하고,
+# 파이썬에서 한글 사용이 가능하도록 먼저 셋팅해야 한다.
+# https://luvris2.tistory.com/119
+
+
 
 def run_eda_app() :
 
